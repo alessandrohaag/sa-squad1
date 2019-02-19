@@ -1,0 +1,8 @@
+{% extends 'layouts/form.html' %}
+{% block title %}Search{% endblock %}
+{% block content %}
+  <form method="post" class="form">
+    <h3 class="form-heading">Search <a href="{{ url_for('home') }}" title="Back to homepage"><i class="fa fa-home pull-right"></i></a></h3>
+    {{ form.namepp(class_ = 'form-control first-input', placeholder = form.name.label.text, required = true, autofocus = true) }}
+    {{ form.usecases(placeholder = form.usecase.label.text, required = none) }}
+{% endblock %}
